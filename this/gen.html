@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+          <style type="text/css">
+            .navbar-static-top {
+  margin-bottom:20px;
+}
+
+i {
+  font-size:16px;
+}
+
+.nav > li > a {
+  color:#787878;
+}
+  
+footer {
+  margin-top:20px;
+  padding-top:20px;
+  padding-bottom:20px;
+  background-color:#efefef;
+}
+
+/* count indicator near icons */
+.nav>li .count {
+  position: absolute;
+  bottom: 12px;
+  right: 6px;
+  font-size: 9px;
+  background: rgba(51,200,51,0.55);
+  color: rgba(255,255,255,0.9);
+  line-height: 1em;
+  padding: 2px 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+        </style>
+		
+		<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+		
+  </head>
+   <body >
+        
+        <!-- header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><font color="#ffffff">P&#237;oP&#237;o</font></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i><font color="#ffffff"> Admin </font><span class="caret"></span></a>
+                    <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                        <li><a href="#">My Profile</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="glyphicon glyphicon-lock"></i><font color="#ffffff"> Logout</font></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <!-- Left column -->
+            <a href="#"><strong><i class="glyphicon glyphicon-menu-hamburger"></i> Menu</strong></a>
+
+            <hr>
+
+            <ul class="nav nav-stacked">
+                    <ul class="nav nav-stacked collapse in" id="userMenu">
+                        <li class="active"> <a href="in.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                        <li><a href="gen.html"><i class="glyphicon glyphicon-bullhorn"></i> General News <span class="badge badge-info">2</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> From the Board </a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-blackboard"></i> Operations </a></li>
+                        <li><a href="pro.html"><i class="glyphicon glyphicon-usd"></i> Promotions <span class="badge badge-info">1</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-star"></i> Client Sucess Stories</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-cutlery"></i> Social Events</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-user"></i> CEO</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-user"></i> CFO</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-user"></i> COO</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-user"></i> Directory</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Rules</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+                    </ul>
+          
+             
+            </ul>
+
+            <hr>
+
+            <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>
+
+            <hr>
+
+            <ul class="nav nav-pills nav-stacked">
+                <li class="nav-header"></li>
+                <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> Toolbox</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-link"></i> Widgets</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Reports</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-book"></i> Pages</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-star"></i> Social Media</a></li>
+            </ul>
+
+
+
+            
+        </div>
+        <!-- /col-3 -->
+        <div class="col-sm-9">
+
+            <!-- column 2 -->
+
+            <a href="#"><strong><i class="glyphicon glyphicon-alert"></i> My Notifications</strong></a>
+            <hr>
+			
+	
+											 
+			<ul class="list-group">
+                <li class="list-group-item"><a href="#"><strong> General News </Strong>| 2 New Notifications 11:05 PM</a></li>
+            </ul>
+			
+            <a href="#"><strong><i class="glyphicon glyphicon-info-sign"></i> Memo Updates</strong></a>
+
+			<hr>
+
+            <div class="row">
+                <div class="col-md-12">
+					
+					
+					<div class="container">
+						<div class="col-md-10">
+							<div class="panel panel-default">
+								<div class="panel-body">
+								   <section class="post-heading">
+										<div class="row">
+											<div class="col-md-11">
+												<div class="media">
+												  <div class="media-left">
+													<a href="#">
+													  <img class="media-object photo-profile" src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g" width="40" height="40" alt="...">
+													</a>
+												  </div>
+												  <div class="media-body">
+													<a href="#" class="anchor-username"><h4 class="media-heading">Bayu Darmantra</h4></a> 
+													<a href="#" class="anchor-time">2 hrs</a>
+												  </div>
+												</div>
+											</div>
+											 <div class="col-md-1">
+												 <a href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+											 </div>
+										</div>             
+								   </section>
+								   <section class="post-body">
+									   <p>Hi Everyone! We are updating software on all the computers. Be aware that IT staff will be visiting you throughout the week to implement the new software. Thank you!</p>
+									   <p><strong>Tags: </strong><a href="#">General News</a>, <a href="#">Operations</a>
+								   </section>
+								   
+								 
+								   
+								</div>
+							</div>   
+						</div>
+					</div>
+										
+					
+					
+					
+					<div class="container">
+						<div class="col-md-10">
+							<div class="panel panel-default">
+								<div class="panel-body">
+								   <section class="post-heading">
+										<div class="row">
+											<div class="col-md-11">
+												<div class="media">
+												  <div class="media-left">
+													<a href="#">
+													  <img class="media-object photo-profile" src="data:image/jpeg;base64,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" width="40" height="40" alt="...">
+													</a>
+												  </div>
+												  <div class="media-body">
+													<a href="#" class="anchor-username"><h4 class="media-heading">John Chen</h4></a> 
+													<a href="#" class="anchor-time">7 hrs</a>
+												  </div>
+												</div>
+											</div>
+											 <div class="col-md-1">
+												 <a href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+											 </div>
+										</div>             
+								   </section>
+								   <section class="post-body">
+									   <p>We are having our annual Welcome Barbecue this January 10th. Food will be provided. Family and kids are welcome and are encouraged to come. We look forward to seeing you there!</p>
+									   <p><strong>Tags: </strong><a href="#">Social Events</a>, <a href="#">Party</a>, <a href="#">Food</a>, <a href="#">General News</a> </p>
+								   </section>
+								   <section class="post-footer">
+									   <hr>
+									   <div class="post-footer-option container">
+
+									   </div>
+									   <div class="post-footer-comment-wrapper">
+										   <div class="comment-form">
+											   
+										   </div>
+										   <div class="comment">
+												<div class="media">
+												  <div class="media-left">
+													<a href="#">
+													  <img class="media-object photo-profile" src="data:image/jpeg;base64,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" width="32" height="32" alt="...">
+													</a>
+												  </div>
+												  <div class="media-body">
+													<a href="#" class="anchor-username"><h4 class="media-heading">Mike Reynolds</h4></a> 
+													<a href="#" class="anchor-time">6 hrs</a>
+												  </div>
+												
+												</div>
+										   </div>
+									   </div>
+								   </section>
+								   <section class="post-body">
+								   
+										
+										
+									   <p>Should we bring food/snacks?</p>
+									   <!-- Trigger/Open The Modal -->
+									   
+										
+
+										<!-- The Modal -->
+	
+								   </section>
+								   
+								</div>
+							</div>   
+						</div>
+					</div>
+					
+					
+					
+					
+					
+                    <div class="btn-group btn-group-justified">
+                        <a href="#" class="btn btn-primary col-sm-3">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            <br> Add a Status
+                        </a>
+                        <a href="#" class="btn btn-primary col-sm-3">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <br> Tools
+                        </a>
+                        <a href="#" class="btn btn-primary col-sm-3">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                            <br> Help
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!--/col-span-9-->
+    </div>
+</div>
+<!-- /Main -->
+
+
+<footer class="text-center">This Bootstrap 3 dashboard layout is compliments of <a href="http://www.bootply.com/85850"><strong>Bootply.com</strong></a></footer>
+
+<div class="modal" id="addWidgetModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Add Widget</h4>
+            </div>
+            <div class="modal-body">
+                <p>Add a widget stuff here..</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" data-dismiss="modal" class="btn">Close</a>
+                <a href="#" class="btn btn-primary">Save changes</a>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dalog -->
+</div>
+<!-- /.modal -->
+        
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+        <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor  -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+            $(".alert").addClass("in").fadeOut(4500);
+
+/* swap open/close side menu icons */
+$('[data-toggle=collapse]').click(function(){
+  	// toggle icon
+  	$(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
+});
+        
+        });
+        
+        </script>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-40413119-1', 'bootply.com');
+          ga('send', 'pageview');
+        </script>
+        
+        
+        <style>
+            .ad {
+              position: absolute;
+              bottom: 70px;
+              right: 48px;
+              z-index: 992;
+              background-color:#f3f3f3;
+              position: fixed;
+              width: 155px;
+              padding:1px;
+            }
+            
+            .ad-btn-hide {
+              position: absolute;
+              top: -10px;
+              left: -12px;
+              background: #fefefe;
+              background: rgba(240,240,240,0.9);
+              border: 0;
+              border-radius: 26px;
+              cursor: pointer;
+              padding: 2px;
+              height: 25px;
+              width: 25px;
+              font-size: 14px;
+              vertical-align:top;
+              outline: 0;
+            }
+            
+            .carbon-img {
+              float:left;
+              padding: 10px;
+            }
+            
+            .carbon-text {
+              color: #888;
+              display: inline-block;
+              font-family: Verdana;
+              font-size: 11px;
+              font-weight: 400;
+              height: 60px;
+              margin-left: 9px;
+              width: 142px;
+              padding-top: 10px;
+            }
+            
+            .carbon-text:hover {
+              color: #666;
+            }
+            
+            .carbon-poweredby {
+              color: #6A6A6A;
+              float: left;
+              font-family: Verdana;
+              font-size: 11px;
+              font-weight: 400;
+              margin-left: 10px;
+              margin-top: 13px;
+              text-align: center;
+            }
+        </style>
+        <div class="ad collapse in">
+          <button class="ad-btn-hide" data-toggle="collapse" data-target=".ad">&times;</button>
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootplycom" id="_carbonads_js"></script>
+        </div>
+        
+    </body>
+</html>
